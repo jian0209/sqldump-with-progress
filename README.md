@@ -1,6 +1,14 @@
 # sqldump-with-progress
 This is the script that support progress bar, while you are using mysql database, and have to dump the data.
 
+## How To Use
+```sh
+git clone https://github.com/jian0209/sqldump-with-progress.git
+cd sqldump-with-progress
+./script.sh
+```
+
+
 ## Description
 - Using pv `sudo apt-get install pv` to show the progress bar when dumping the sql data.
 - Supported base64 decryption, and no password showing, make mysqldump more secure.
