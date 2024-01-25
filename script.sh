@@ -149,7 +149,7 @@ fi
         execute_dump_command="$execute_dump_command ""--databases"" $database_list"
     fi
     
-    file_size=$(echo $execute_get_size_command | awk '{print int($1+0.5)}')
+    file_size=$(echo "$execute_get_size_command * 0.9" | bc -l | awk '{printf("%d\n",$1 + 0.5)}')
 
     if [ "$output_file" != "" ]; then
         execute_dump_command="$execute_dump_command | pv -W -s $file_size""M | gzip -c > $output_file"
